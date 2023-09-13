@@ -51,21 +51,21 @@
 
 <svelte:window bind:innerWidth={innerWidth} bind:innerHeight={innerHeight} />
 
-<div class="fixed z-10 { shift? '' : 'translate-x-[-10vw]' } w-[10vw] h-screen bg-gray-600">
-    <button class="ml-[7vw]" on:click={() => {
+<div class="fixed z-10 { shift? '' : 'sm:translate-x-[-10vw] translate-x-[-25vw]' } sm:w-[10vw] w-[25vw] h-screen bg-gray-600">
+    <button class="sm:ml-[7vw] ml-[14vw]" on:click={() => {
         shift = !shift
     }}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 stroke-red-300">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>          
+        </svg>
     </button>
     <div class="grid place-content-center w-full">
         {#if innerWidth > innerHeight}
             <button class="bg-gray-500 hover:bg-gray-700 w-[9vw] py-1 rounded text-center" on:click={go_home}>
-                Home                    
+                Home
             </button>
         {:else}
-            <button class="bg-gray-500 hover:bg-gray-700 w-[9vw] py-1 rounded flex place-content-center" on:click={go_home}>
+            <button class="bg-gray-500 hover:bg-gray-700 sm:w-[9vw] w-[24vw] py-1 rounded flex place-content-center" on:click={go_home}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 stroke-black">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>                          
@@ -82,9 +82,9 @@
         </svg>     
     </button> 
 </div>
-<div class="h-screen w-screen grid grid-rows-[repeat(20,_minmax(0,_1fr))] grid-cols-1 pt-14 px-20">
+<div class="h-screen w-screen grid grid-rows-[repeat(20,_minmax(0,_1fr))] grid-cols-1 pt-14 sm:px-20">
     {#if innerHeight > innerWidth}
-        <div class="row-[span_19_/_span_19] bg-gray-900 text-white rounded-t-md p-3">
+        <div class="row-[span_19_/_span_19] bg-gray-900 text-white rounded-t-md p-3 overflow-scroll">
             <ul class="flex flex-col gap-4 text-3xl">
                 {#each $history as entry}
                     <!-- Requests are on the right side while responses are on the left -->
