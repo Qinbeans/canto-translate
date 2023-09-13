@@ -51,7 +51,7 @@
 
 <svelte:window bind:innerWidth={innerWidth} bind:innerHeight={innerHeight} />
 
-<div class="fixed z-10 { shift? '' : 'sm:translate-x-[-10vw] translate-x-[-25vw]' } sm:w-[10vw] w-[25vw] h-screen bg-gray-600">
+<div class="fixed z-10 { shift? '' : 'sm:translate-x-[-10vw] translate-x-[-25vw]' } sm:w-[10vw] w-[25vw] h-dscreen bg-gray-600">
     <button class="sm:ml-[7vw] ml-[14vw]" on:click={() => {
         shift = !shift
     }}>
@@ -82,7 +82,7 @@
         </svg>     
     </button> 
 </div>
-<div class="h-screen w-screen grid grid-rows-[repeat(20,_minmax(0,_1fr))] grid-cols-1 pt-14 sm:px-20">
+<div class="h-dscreen w-dscreen grid grid-rows-[repeat(20,_minmax(0,_1fr))] grid-cols-1 pt-14 sm:px-20">
     {#if innerHeight > innerWidth}
         <div class="row-[span_19_/_span_19] bg-gray-900 text-white rounded-t-md p-3 overflow-scroll">
             <ul class="flex flex-col gap-4 text-3xl">

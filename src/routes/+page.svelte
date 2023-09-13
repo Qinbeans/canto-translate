@@ -1,13 +1,19 @@
 <script lang="ts">
     /** @type {import(./$types).PageData} **/
     export let data: any
+    data.health = {
+        status: "loading",
+        grpc: "loading",
+        queue_size: "loading",
+        ws_connections: "loading"
+    }
     let status = data.health.status
     let grpc = data.health.grpc
     let size = data.health.queue_size
     let conns = data.health.ws_connections
     
 </script>
-<div class="h-screen grid place-items-center">
+<div class="h-dscreen grid place-items-center">
     <div class="bg-white/75 sm:text-xl text-sm rounded sm:p-5 p-1 grid grid-rows-[repeat(10,_minmax(0,_1fr))] grid-cols-8 sm:w-[50vw] w-[75vw] sm:h-[50vw] h-[75vw] sm:gap-5 gap-1">
         <div class="sm:text-5xl text-xl col-span-8 row-span-2 text-center bg-black/10 sm:p-2 font-bold">
             Translate English to Cantonese
