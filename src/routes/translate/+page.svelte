@@ -12,7 +12,7 @@
     let value: string = ""
 
     const send_request = async () => {
-        const res = await fetch("https://canto.qinbeans.net/api/v1/translate", {
+        const res = await fetch("https://cantonese.qinbeans.net/api/v1/translate", {
             method: "POST",
             body: JSON.stringify({
                 text: value
@@ -22,7 +22,7 @@
 
         const token = body["token"]
 
-        const ws = new WebSocket(`wss://canto.qinbeans.net/api/v1/ws/${token}`)
+        const ws = new WebSocket(`wss://cantonese.qinbeans.net/api/v1/ws/${token}`)
 
         // listen for ping from server
         ws.addEventListener("message",(event) => {
