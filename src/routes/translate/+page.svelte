@@ -84,7 +84,7 @@
 </div>
 <div class="h-dscreen w-dscreen grid grid-rows-[repeat(20,_minmax(0,_1fr))] grid-cols-1 pt-14 sm:px-20">
     {#if innerHeight > innerWidth}
-        <div class="row-[span_19_/_span_19] bg-gray-900 text-white rounded-t-md p-3 overflow-scroll">
+        <div class="sm:row-[span_19_/_span_19] row-[span_18_/_span_18] bg-gray-900 text-white rounded-t-md p-3 overflow-scroll">
             <ul class="flex flex-col gap-4 text-3xl">
                 {#each $history as entry}
                     <!-- Requests are on the right side while responses are on the left -->
@@ -99,7 +99,7 @@
                 {/each}
             </ul>
         </div>
-        <form class="row-[span_1_/_span_1] bg-gray-900 flex"
+        <form class="sm:row-[span_1_/_span_1] row-[span_2_/_span_1] bg-gray-900 flex"
         on:submit={send_request}>
             <textarea bind:value={value} required name="" id="" class="w-full h-full bg-gray-900 text-white border border-white rounded-md p-2 resize-none" placeholder="Enter Text Here"></textarea>
             <button class="rounded border-white border w-10 h-10 hover:bg-gray-500">
