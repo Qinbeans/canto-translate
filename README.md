@@ -2,7 +2,7 @@
 
 It simply performs one task, translate English to Cantonese.
 
-![logo](https://raw.githubusercontent.com/translate-canto/translate-canto/main/public/src/lib/logo_x4.webp)
+![logo](https://raw.githubusercontent.com/Qinbeans/canto-translate/main/src/lib/logo_x4.webp)
 
 ## How to run
 
