@@ -1,12 +1,6 @@
 <script lang="ts">
     /** @type {import(./$types).PageData} **/
     export let data: any
-    data.health = {
-        status: "loading",
-        grpc: "loading",
-        queue_size: "loading",
-        ws_connections: "loading"
-    }
     let status = data.health.status
     let grpc = data.health.grpc
     let size = data.health.queue_size
